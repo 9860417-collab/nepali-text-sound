@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // msedge-tts opens a WebSocket from Node; keep it out of the server bundle
+  serverExternalPackages: ["msedge-tts"],
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
